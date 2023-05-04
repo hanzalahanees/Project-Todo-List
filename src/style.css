@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/********************   Home Header  ************************/
+.header {
+  display: flex;
+  background-color: #302013;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  color: #eee;
+  font-family: 'Caveat';
+  z-index: 1;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+}
+
+.header h1 {
+  font-size: 36px;
+}
+
+/********************   Main Container  ************************/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-bottom: 0;
+}
+
+/********************   Sidebar  ************************/
+.side-bar {
+  background-color: sandybrown;
+  height: 93vh;
+}
+
+.btn-list {
+  padding: 2px;
+  margin-bottom: 35px;
+}
+
+.button {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  margin: 8px 10px;
+  padding: 5px 24px;
+  width: 90%;
+  background-color: sandybrown;
+  border: none;
+  cursor: pointer;
+}
+
+.button img {
+  width: 36px;
+  height: 36px;
+}
+
+button:hover {
+  background-color: beige;
+  border-radius: 30px 15px;
+}
+
+.project-title,
+.schedule-title,
+.notes-title {
+  margin-top: 20px;
+  text-align: center;
+  background-color: beige;
+  border-radius: 20px;
+}
+
+.plus-button {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  background-color: #302013;
+  text-align: center;
+  color: #eee;
+  text-align: center;
+  font-size: 80px;
+  margin: 350px 0px 0px 20px;
+}
+
+#createNew:hover {
+  background-color: #302013;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+/**************** create New with PLus Button **************/
+.overlay-new {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(43, 24, 155, 0.24);
+  visibility: visible;
+  opacity: 1;
+}
+
+.create-new {
+  background-color: tan;
+  width: 80vw;
+  margin: 80px 60px;
+}
+
+.create-new-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-new-header .title {
+  background-color: #302013;
+  font-size: 30px;
+  color: aliceblue;
+  width: 100%;
+  padding: 20px;
+  font-family: lato, sans-serif;
+}
+
+.cancel {
+  position: absolute;
+  right: 20px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  font-family: Kanit, lato, sans-serif;
+}
+
+.cancel:hover {
+  color: red;
+}
+
+.createNew-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.createNewSidebar {
+  background-color: sandybrown;
+  min-height: 60vh;
+  gap: 5px;
+}
+
+.btn {
+  padding: 5px 32px;
+  margin: 5px;
+  display: block;
+  text-align: left;
+  width: 200px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: lightcoral;
+  font-size: 30px;
+}
+
+.create-todo,
+.create-project,
+.create-note {
+  display: none;
+}
+
+.create-todo {
+  display: block;
+}
+
+form {
+  padding: 20px;
+  min-height: 60vh;
+
+}
+
+.input,
+.textarea {
+  display: flex;
+  flex-direction: column;
+
+}
+
+input,
+textarea {
+  padding: 5px 8px;
+  outline: none;
+  border: 1px solid #302013;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.btn-create-new,
+.details-popup-close {
+  padding: 16px 20px;
+  font-size: 24px;
+  background-color: #302013;
+  border: 2px solid sandybrown;
+  border-radius: 30px;
+  cursor: pointer;
+  color: gray;
+}
+
+.btn-add-todo {
+  margin: 20px 0px 0px 600px;
+}
+
+.btn-create-project {
+  margin: 350px 0px 0px 200px;
+}
+
+.btn-create-note {
+  margin: 20px 0px 0px 30px;
+}
+
+.btn-add-todo:hover,
+.btn-create-project:hover,
+.btn-create-note:hover {
+  background-color: #302013;
+  color: #fff;
+  border: 2px solid #fff;
+  font-style: italic;
+}
+
+/********************   Todo Item created By User, 7 sample are added  ************************/
+.todo {
+  height: 3rem;
+  margin: 12px;
+  border-radius: 15px;
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  margin: 10px;
+  height: 1.5rem;
+  width: 1.5rem;
+  accent-color: #302013;
+  cursor: pointer;
+}
+
+.todo__title {
+  margin-right: auto;
+  padding: 10px;
+}
+
+.todo__detail,
+.todo__priority {
+  margin-left: 30px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 1rem;
+  color: grey;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background-color: #302013;
+  border: none;
+}
+
+.todo__detail:hover {
+  color: white;
+  font-style: italic;
+  border: 2px solid #fff;
+}
+
+.todo__date {
+  margin: 0px 30px 0px 50px;
+  padding: 10px;
+  color: #fff;
+  width: 130px;
+}
+
+.todo__icon {
+  margin: 18px;
+  width: 40px;
+  height: 40px;
+  fill: #501f3a;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.priorityHere {
+  margin-left: 200px;
+  background-color: tomato;
+  cursor: default;
+  width: 80px;
+}
+
+.priority-low {
+  border-left: 3px solid green;
+}
+
+.priority-medium {
+  border-left: 3px solid orange;
+}
+
+.priority-high {
+  border-left: 3px solid red;
+}
+
+/********************   Details popup  when user Click on Details ************************/
+.Details-popup {
+  background-color: skyblue;
+  width: 80vw;
+  margin: 80px 60px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.details-popup-title {
+  font-size: 48px;
+  text-align: center;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  text-transform: capitalize;
+}
+
+h3 {
+  display: inline-block;
+  margin: 2px;
+  padding: 8px;
+  width: 100px;
+}
+
+.span {
+  margin-left: 8px;
+}
+
+.details-popup-close {
+  width: 300px;
+  margin: 30px 0px 10px 360px;
+  border: 2px solid yellow;
+}
+
+.details-popup-close:hover {
+  font-style: italic;
+  color: yellow;
+  background-color: maroon;
+  border: 2px solid aliceblue;
+}
+
+/********************   home container where todo items are listed  ************************/
+#homeContainer {
+  background-color: saddlebrown;
+}
+
+.resetBtnHolder {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 200px;
+}
+
+.resetBtn {
+  padding: 8px 12px;
+  font-size: 24px;
+  background-color: #302013;
+  border: 2px solid sandybrown;
+  border-radius: 30px;
+  cursor: pointer;
+  color: gray;
+}
+
+.resetBtn:hover {
+  background-color: black;
+  color: red;
+  font-size: 30px;
+  width: 250px;
+}
